@@ -39,12 +39,12 @@ Logger::~Logger() = default;
 FileLock::~FileLock() = default;
 
 void Log(Logger* info_log, const char* format, ...) {
-  if (info_log != nullptr) {
+  /*if (info_log != nullptr) {
     std::va_list ap;
     va_start(ap, format);
     info_log->Logv(format, ap);
     va_end(ap);
-  }
+  }*/
 }
 
 static Status DoWriteStringToFile(Env* env, const Slice& data,
