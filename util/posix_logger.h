@@ -32,7 +32,7 @@ class PosixLogger final : public Logger {
 
   void Logv(const char* format, std::va_list arguments) override {
     // Record the time as close to the Logv() call as possible.
-    struct ::timeval now_timeval;
+    /*struct ::timeval now_timeval;
     ::gettimeofday(&now_timeval, nullptr);
     const std::time_t now_seconds = now_timeval.tv_sec;
     struct std::tm now_components;
@@ -118,7 +118,7 @@ class PosixLogger final : public Logger {
         delete[] buffer;
       }
       break;
-    }
+    }*/
   }
 
  private:
